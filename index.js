@@ -27,7 +27,7 @@ try {
           ? res.data.workflow_runs[0].head_commit.id
           : "";
 
-      console.log(`found ${res.data.workflow_runs.length} runs of workflow '${workflow_id}' for branch '${branch}', commit hash is '${lastSuccessCommitHash}'`)
+      console.info(`found ${res.data.workflow_runs.length} runs of workflow '${workflow_id}' for branch '${branch}', commit hash is '${lastSuccessCommitHash}'`)
   
       core.setOutput("commit_hash", lastSuccessCommitHash);
 
